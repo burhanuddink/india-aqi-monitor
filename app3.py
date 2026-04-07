@@ -1,4 +1,4 @@
-# app3.py
+# app4.py
 
 import streamlit as st
 import requests
@@ -187,77 +187,7 @@ div[data-testid="stButton"] button:not([kind="primary"]):hover {
 }
 .app-footer { font-size: 0.75rem; color: var(--text-color); opacity: 0.28; margin-top: 2.5rem; }
 
-/* ════════════════════════════════════════════════════════════════════════════
-   LIGHT MODE OVERRIDES
-   Uses prefers-color-scheme: light. Streamlit also applies the theme via its
-   own CSS variables, so we target both the OS media query and Streamlit's
-   data-theme attribute to ensure reliable detection in all browsers.
-   ════════════════════════════════════════════════════════════════════════════ */
-@media (prefers-color-scheme: light) {
 
-    /* ── Search input ──────────────────────────────────────────────────────── */
-    div[data-testid="stTextInput"] input {
-        background: #ffffff !important;
-        border: 1px solid rgba(0,0,0,0.14) !important;
-        color: #1a1a1a !important;
-    }
-    div[data-testid="stTextInput"] input::placeholder {
-        color: #1a1a1a !important;
-        opacity: 0.38 !important;
-    }
-    div[data-testid="stTextInput"] input:focus {
-        border-color: rgba(42,158,100,0.55) !important;
-        box-shadow: 0 0 0 3px rgba(42,158,100,0.09) !important;
-    }
-
-    /* ── AQI main card ─────────────────────────────────────────────────────── */
-    .aqi-main-card {
-        background: linear-gradient(160deg, #f0f7f4 0%, #e8f5ef 60%, #dff2ea 100%);
-        border: 1px solid rgba(0,0,0,0.07);
-    }
-    .aqi-station { color: rgba(0,0,0,0.45); }
-    .aqi-card-label { color: rgba(0,0,0,0.35); }
-
-    /* ── Feedback card ─────────────────────────────────────────────────────── */
-    .feedback-card {
-        background: #ffffff;
-        border: 1px solid rgba(0,0,0,0.08);
-    }
-    .feedback-card-title { color: rgba(0,0,0,0.4); }
-    .feedback-card-text { color: rgba(0,0,0,0.78); }
-
-    /* ── Eco card ──────────────────────────────────────────────────────────── */
-    .eco-card {
-        background: rgba(42,158,100,0.06);
-        border: 1px solid rgba(42,158,100,0.2);
-    }
-    .eco-card-title { color: rgba(28,120,75,0.75); }
-    .eco-card-text { color: rgba(0,0,0,0.75); }
-
-    /* ── Stat boxes ────────────────────────────────────────────────────────── */
-    .stat-box {
-        background: #ffffff;
-        border: 1px solid rgba(0,0,0,0.08);
-    }
-
-    /* ── AQI scale reference table ─────────────────────────────────────────── */
-    .aqi-table-wrap table { color: rgba(0,0,0,0.75) !important; }
-    .aqi-table-wrap thead tr { border-bottom: 1px solid rgba(0,0,0,0.1) !important; }
-    .aqi-table-wrap th { color: rgba(0,0,0,0.45) !important; }
-    .aqi-table-wrap td { color: rgba(0,0,0,0.72) !important; }
-
-    /* ── Note box ──────────────────────────────────────────────────────────── */
-    .note-box {
-        background: rgba(232,184,75,0.1);
-        color: #7a5c10;
-    }
-}
-
-/* ════════════════════════════════════════════════════════════════════════════
-   MOBILE RESPONSIVE  (≤ 768 px)
-   Streamlit renders columns as flex children. On mobile we override that flex
-   layout so every column becomes a full-width block stacked vertically.
-   ════════════════════════════════════════════════════════════════════════════ */
 @media (max-width: 768px) {
 
     /* Tighten global page padding so content breathes on small screens */
